@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>くるみ  の  窩</title>
-    <link>http://localhost:1313/</link>
+    <link>https://blog.0w0-b.com/</link>
     <description>Recent content on くるみ  の  窩</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 00:48:41 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.0w0-b.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>XSS 軍火庫</title>
-      <link>http://localhost:1313/posts/xss_cheat/</link>
+      <link>https://blog.0w0-b.com/posts/xss_cheat/</link>
       <pubDate>Thu, 05 Feb 2026 00:48:41 +0800</pubDate>
-      <guid>http://localhost:1313/posts/xss_cheat/</guid>
+      <guid>https://blog.0w0-b.com/posts/xss_cheat/</guid>
       <description>XSS 真的越學越好玩 q(≧▽≦q)&#xA;但學不動了，又捲又菜的捲心胡桃菜&amp;hellip;&#xA;速查 BurpSuite XSS 全姿勢: https://portswigger.net/web-security/cross-site-scripting/cheat-sheet Prototype Pollution （一種覆蓋掉 JS 物件屬性內容的攻擊）: BlackFan/client-side-prototype-pollution CSP Bypass: https://cspbypass.com/ XSLeak WIKI: https://xsleaks.dev/ CURE53 GOD html5sec: https://html5sec.org/ BurpSuite 插件很適合拿來快速找！ 還沒念的文章 qq https://mizu.re/post/exploring-the-dompurify-library-bypasses-and-fixes https://blog.pspaul.de/posts/bench-press-leaking-text-nodes-with-css/ https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/ https://sudistark.github.io/2024/08/31/bypassing-csp-via-url-parser-confusions-xss-on-netlify-s-image-cdn.html 好像是字體相關的 bug (link) Trusted Types: https://web.dev/articles/trusted-types?hl=zh-tw Lab Intigriti XSS Challenges: https://www.intigriti.com/researchers/hackademy/xss-challenges Huli Writeup https://blog.huli.tw/ </description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://blog.0w0-b.com/about/</link>
       <pubDate>Wed, 04 Feb 2026 23:37:08 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://blog.0w0-b.com/about/</guid>
       <description>我是誰 想成為像胡桃姊姊那樣強的笨蛋 喜歡 cos 和唱歌 /_ \ 看到大家都喜歡建立一個網站寫點東西就建一個了，請大家多多指教！ 我有時候真的很吵很吵很吵 ㄧㄝ</description>
     </item>
   </channel>

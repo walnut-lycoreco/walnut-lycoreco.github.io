@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://blog.0w0-b.com/posts/</loc>
     <lastmod>2026-02-05T00:48:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/xss_cheat/</loc>
+    <loc>https://blog.0w0-b.com/posts/xss_cheat/</loc>
     <lastmod>2026-02-05T00:48:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.0w0-b.com/</loc>
     <lastmod>2026-02-05T00:48:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.0w0-b.com/about/</loc>
     <lastmod>2026-02-04T23:37:08+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://blog.0w0-b.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://blog.0w0-b.com/tags/</loc>
   </url>
 </urlset>
