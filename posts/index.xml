@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on くるみ  の  窩</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on くるみ  の  窩</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 00:48:41 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS 軍火庫</title>
+      <link>http://localhost:1313/posts/xss_cheat/</link>
+      <pubDate>Thu, 05 Feb 2026 00:48:41 +0800</pubDate>
+      <guid>http://localhost:1313/posts/xss_cheat/</guid>
+      <description>XSS 真的越學越好玩 q(≧▽≦q)&#xA;但學不動了，又捲又菜的捲心胡桃菜&amp;hellip;&#xA;速查 BurpSuite XSS 全姿勢: https://portswigger.net/web-security/cross-site-scripting/cheat-sheet Prototype Pollution （一種覆蓋掉 JS 物件屬性內容的攻擊）: BlackFan/client-side-prototype-pollution CSP Bypass: https://cspbypass.com/ XSLeak WIKI: https://xsleaks.dev/ CURE53 GOD html5sec: https://html5sec.org/ BurpSuite 插件很適合拿來快速找！ 還沒念的文章 qq https://mizu.re/post/exploring-the-dompurify-library-bypasses-and-fixes https://blog.pspaul.de/posts/bench-press-leaking-text-nodes-with-css/ https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/ https://sudistark.github.io/2024/08/31/bypassing-csp-via-url-parser-confusions-xss-on-netlify-s-image-cdn.html 好像是字體相關的 bug (link) Trusted Types: https://web.dev/articles/trusted-types?hl=zh-tw Lab Intigriti XSS Challenges: https://www.intigriti.com/researchers/hackademy/xss-challenges Huli Writeup https://blog.huli.tw/ </description>
+    </item>
+  </channel>
+</rss>
