@@ -6,8 +6,22 @@
     <description>Recent content on くるみ  の  窩</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 00:48:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 23:47:30 +0800</lastBuildDate>
     <atom:link href="https://blog.0w0-b.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>隨筆－聚</title>
+      <link>https://blog.0w0-b.com/posts/lone-2602/</link>
+      <pubDate>Wed, 11 Feb 2026 23:47:30 +0800</pubDate>
+      <guid>https://blog.0w0-b.com/posts/lone-2602/</guid>
+      <description>今日下午又看到以前同學們相約出門玩耍的限動&amp;hellip;其實有點百感交集，但也不知從何談起，與誰細論 想將自己文字留於部落格一隅的文章，真提筆了&amp;hellip;那興味頓時也散了 所以這一文的存在正如世說新語中 「王子猷雪夜訪戴」 故事一般吧 「乘興而行，興盡而返，何必見戴？」 我又何必真的提筆而行呢？</description>
+    </item>
+    <item>
+      <title>LA CTF 2026 Note</title>
+      <link>https://blog.0w0-b.com/posts/la-ctf-2026/</link>
+      <pubDate>Wed, 11 Feb 2026 00:48:41 +0800</pubDate>
+      <guid>https://blog.0w0-b.com/posts/la-ctf-2026/</guid>
+      <description>序 還有好多要學，我都不會 &amp;hellip;&#xA;隊友好厲害這次全球第九&#xA;來寫點筆記，這些題目都是賽中我沒有解的 /_ \&#xA;Web glotq GoLang, 解析不一致&#xA;是一個 GoLang 寫成的網站，有個 Middleware 作內容過濾以及 Handler 透過 Middleware 派發請求作主邏輯&#xA;middleware.go&#xA;做了資料過濾，如果不繞過無法 RCE&#xA;... var endpointCommands = map[string]map[string]bool{ &amp;#34;/json&amp;#34;: {&amp;#34;jq&amp;#34;: true, &amp;#34;man&amp;#34;: true}, &amp;#34;/yaml&amp;#34;: {&amp;#34;yq&amp;#34;: true, &amp;#34;man&amp;#34;: true}, &amp;#34;/xml&amp;#34;: {&amp;#34;xq&amp;#34;: true, &amp;#34;man&amp;#34;: true}, } ... switch { case strings.Contains(contentType, &amp;#34;application/json&amp;#34;): var payload JSONPayload if err := json.Unmarshal(body, &amp;amp;payload); err != nil { http.Error(w, &amp;#34;Failed to parse JSON&amp;#34;, http.StatusBadRequest) return } command = payload.</description>
+    </item>
     <item>
       <title>XSS 軍火庫</title>
       <link>https://blog.0w0-b.com/posts/xss_cheat/</link>

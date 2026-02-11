@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>XSS 軍火庫 | くるみ  の  窩</title>
+<title>LA CTF 2026 Note | くるみ  の  窩</title>
 
 
 <meta name="color-scheme" content="light dark">
@@ -523,17 +523,17 @@
       
       
       
-      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 relative">XSS 軍火庫</h1>
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 relative">LA CTF 2026 Note</h1>
       
       <div class="flex flex-wrap items-center text-sm text-gray-500 gap-4 relative">
         
         
         
-        <time datetime="2026-02-05T00:48:41&#43;08:00" class="flex items-center">
+        <time datetime="2026-02-11T00:48:41&#43;08:00" class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          2026-02-05
+          2026-02-11
         </time>
         
         
@@ -541,7 +541,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          1 min read
+          6 min read
         </span>
 
         
@@ -580,11 +580,13 @@
         <div class="prose prose-sm max-w-none">
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#web">Web</a>
       <ul>
-        <li><a href="#速查">速查</a></li>
-        <li><a href="#還沒念的文章-qq">還沒念的文章 qq</a></li>
-        <li><a href="#lab">Lab</a></li>
+        <li><a href="#glotq">glotq</a></li>
+        <li><a href="#bobles-and-narnes">bobles-and-narnes</a></li>
+        <li><a href="#ad-note">ad-note</a></li>
+        <li><a href="#extend-note">extend-note</a></li>
       </ul>
     </li>
   </ul>
@@ -595,52 +597,211 @@
     
 
     <div class="p-8 prose prose-sm sm:prose lg:prose-lg max-w-none">
-      <p>XSS 真的越學越好玩 q(≧▽≦q)<br>
-但學不動了，又捲又菜的捲心胡桃菜&hellip;</p>
+      
+<h2 id="序">序
+  <a class="heading-anchor" href="#%e5%ba%8f" aria-label="Copy link to this section">
+    <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+    </svg>
+  </a>
+</h2>
+<p>還有好多要學，我都不會 &hellip;<br>
+隊友好厲害這次全球第九<br>
+來寫點筆記，這些題目都是賽中我沒有解的 /_ \</p>
 
-<h3 id="速查">速查
-  <a class="heading-anchor" href="#%e9%80%9f%e6%9f%a5" aria-label="Copy link to this section">
+<h2 id="web">Web
+  <a class="heading-anchor" href="#web" aria-label="Copy link to this section">
+    <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+    </svg>
+  </a>
+</h2>
+
+<h3 id="glotq">glotq
+  <a class="heading-anchor" href="#glotq" aria-label="Copy link to this section">
     <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
       <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
     </svg>
   </a>
 </h3>
-<ul>
-<li>BurpSuite XSS 全姿勢: <a href="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet">https://portswigger.net/web-security/cross-site-scripting/cheat-sheet</a></li>
-<li>Prototype Pollution （一種覆蓋掉 JS 物件屬性內容的攻擊）: <a href="https://github.com/BlackFan/client-side-prototype-pollution/tree/master">BlackFan/client-side-prototype-pollution</a></li>
-<li>CSP Bypass: <a href="https://cspbypass.com/">https://cspbypass.com/</a></li>
-<li>XSLeak WIKI: <a href="https://xsleaks.dev/">https://xsleaks.dev/</a></li>
-<li>CURE53 GOD html5sec: <a href="https://html5sec.org/">https://html5sec.org/</a>
-BurpSuite 插件很適合拿來快速找！</li>
-</ul>
+<blockquote>
+<p>GoLang, 解析不一致</p>
+</blockquote>
+<p>是一個 GoLang 寫成的網站，有個 Middleware 作內容過濾以及 Handler 透過 Middleware 派發請求作主邏輯</p>
+<p>middleware.go<br>
+做了資料過濾，如果不繞過無法 RCE</p>
+<pre tabindex="0"><code class="language-go">...
+var endpointCommands = map[string]map[string]bool{
+	&#34;/json&#34;: {&#34;jq&#34;: true, &#34;man&#34;: true},
+	&#34;/yaml&#34;: {&#34;yq&#34;: true, &#34;man&#34;: true},
+	&#34;/xml&#34;:  {&#34;xq&#34;: true, &#34;man&#34;: true},
+}
+...
 
-<h3 id="還沒念的文章-qq">還沒念的文章 qq
-  <a class="heading-anchor" href="#%e9%82%84%e6%b2%92%e5%bf%b5%e7%9a%84%e6%96%87%e7%ab%a0-qq" aria-label="Copy link to this section">
+		switch {
+		case strings.Contains(contentType, &#34;application/json&#34;):
+			var payload JSONPayload
+			if err := json.Unmarshal(body, &amp;payload); err != nil {
+				http.Error(w, &#34;Failed to parse JSON&#34;, http.StatusBadRequest)
+				return
+			}
+			command = payload.Command
+			args = payload.Args
+
+		case strings.Contains(contentType, &#34;application/yaml&#34;) ||
+			strings.Contains(contentType, &#34;text/yaml&#34;):
+			var payload YAMLPayload
+			if err := yaml.Unmarshal(body, &amp;payload); err != nil {
+				http.Error(w, &#34;Failed to parse YAML&#34;, http.StatusBadRequest)
+				return
+			}
+			command = payload.Command
+			args = payload.Args
+
+		case strings.Contains(contentType, &#34;application/xml&#34;) ||
+			strings.Contains(contentType, &#34;text/xml&#34;):
+			var payload XMLPayload
+			if err := xml.Unmarshal(body, &amp;payload); err != nil {
+				http.Error(w, &#34;Failed to parse XML&#34;, http.StatusBadRequest)
+				return
+			}
+			command = payload.Command
+			args = payload.Args.Args
+...
+		if command == &#34;man&#34; {
+			if len(args) != 1 {
+				http.Error(w, &#34;Man command requires exactly one argument&#34;, http.StatusForbidden)
+				return
+			}
+			allowedManArgs := map[string]bool{&#34;jq&#34;: true, &#34;yq&#34;: true, &#34;xq&#34;: true}
+			if !allowedManArgs[args[0]] {
+				http.Error(w, &#34;Man command argument must be jq, yq, or xq&#34;, http.StatusForbidden)
+				return
+			}
+		}</code></pre><p>而 handlers.go 則是根據請求的網址做資料解析，再執行命令！<br>
+有個 GoLang 的知識點是，對資料解析的活性很大，就好像傳入的資料如果會被 XML Unmarshal 解析，那它會主動搜尋字串裡面的 XML 格式資料做解析。<br>
+所以這題就是利用前後端解析的不一致，透過 Content Type 欺騙 Middleware 用 JSON 做資料解析，但是其實請求 <code>/xml</code> 路徑來偷遞惡意指令<br>
+最後，man 指令可以進行 Argument Injection，傳入 <code>--html</code> 參數可以執行指令，並且它會想辦法用執行的指令開啟瀏覽器。</p>
+<pre tabindex="0"><code class="language-json">{
+    &#34;command&#34;:&#34;xq&#34;,
+    &#34;args&#34;:[&#34;.&#34;],
+    &#34;x&#34;:&#34;&lt;request&gt;&lt;command&gt;man&lt;/command&gt;&lt;args&gt;&lt;arg&gt;--html=/read flag&lt;/arg&gt;&lt;arg&gt;xq&lt;/arg&gt;&lt;/args&gt;&lt;/request&gt;&#34;
+}</code></pre>
+<h3 id="bobles-and-narnes">bobles-and-narnes
+  <a class="heading-anchor" href="#bobles-and-narnes" aria-label="Copy link to this section">
     <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
       <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
     </svg>
   </a>
 </h3>
-<ul>
-<li><a href="https://mizu.re/post/exploring-the-dompurify-library-bypasses-and-fixes">https://mizu.re/post/exploring-the-dompurify-library-bypasses-and-fixes</a></li>
-<li><a href="https://blog.pspaul.de/posts/bench-press-leaking-text-nodes-with-css/">https://blog.pspaul.de/posts/bench-press-leaking-text-nodes-with-css/</a></li>
-<li><a href="https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/">https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/</a></li>
-<li><a href="https://sudistark.github.io/2024/08/31/bypassing-csp-via-url-parser-confusions-xss-on-netlify-s-image-cdn.html">https://sudistark.github.io/2024/08/31/bypassing-csp-via-url-parser-confusions-xss-on-netlify-s-image-cdn.html</a></li>
-<li>好像是字體相關的 bug <a href="https://www.sonarsource.com/blog/joomla-multiple-xss-vulnerabilities/">(link)</a></li>
-<li>Trusted Types: <a href="https://web.dev/articles/trusted-types?hl=zh-tw">https://web.dev/articles/trusted-types?hl=zh-tw</a></li>
-</ul>
+<blockquote>
+<p>NodeJS, bun, 解析不一致</p>
+</blockquote>
+<p>一個線上書籍網站，有一本 FLAG 特別貴，每本書都有分試讀版和正式版<br>
+主要漏洞邏輯：</p>
+<pre tabindex="0"><code class="language-js">app.post(&#39;/cart/add&#39;, needsAuth, async (req, res) =&gt; {
+  const productsToAdd = req.body.products;
+  if (!Array.isArray(productsToAdd) || productsToAdd.length === 0) {
+    return res.json({ err: &#39;please add a product to cart&#39; });
+  }
 
-<h3 id="lab">Lab
-  <a class="heading-anchor" href="#lab" aria-label="Copy link to this section">
+  const [{ balance }] = await db`SELECT balance FROM users WHERE username=${res.locals.username}`;
+  const [{ cartSum }] = await db`
+    SELECT SUM(books.price) AS cartSum
+    FROM cart_items
+    JOIN books ON books.id = cart_items.book_id
+    WHERE cart_items.username = ${res.locals.username} AND cart_items.is_sample = 0
+  `;
+  const additionalSum = productsToAdd
+    .filter((product) =&gt; !&#43;product.is_sample)
+    .map((product) =&gt; booksLookup.get(product.book_id).price ?? 99999999)
+    .reduce((l, r) =&gt; l &#43; r, 0);
+
+  console.log({ additionalSum, cartSum, balance });
+  console.log(additionalSum &#43; cartSum);
+
+  if (additionalSum &#43; cartSum &gt; balance) {
+    return res.json({ err: &#39;too poor, have you considered geting more money?&#39; })
+  }
+  const cartEntries = productsToAdd.map((prod) =&gt; ({ ...prod, username: res.locals.username }));
+  await db`INSERT INTO cart_items ${db(cartEntries)}`;
+  res.json({ remainingBalance: balance - cartSum - additionalSum });
+});</code></pre><p>這題有兩種解法！</p>
+
+<h4 id="解-1">解 1
+  <a class="heading-anchor" href="#%e8%a7%a3-1" aria-label="Copy link to this section">
+    <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+    </svg>
+  </a>
+</h4>
+<p>傳入一個夠小的浮點數，會被 JavaScript 解析為 1，但是會被 SQLite 解析為 0 的</p>
+
+<h4 id="解-2">解 2
+  <a class="heading-anchor" href="#%e8%a7%a3-2" aria-label="Copy link to this section">
+    <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+    </svg>
+  </a>
+</h4>
+<p>這是隊友使用的做法：</p>
+<pre tabindex="0"><code class="language-js">  const cartEntries = productsToAdd.map((prod) =&gt; ({ ...prod, username: res.locals.username }));
+  await db`INSERT INTO cart_items ${db(cartEntries)}`;</code></pre><p>這邊的 <code>${db(cartEntries)}</code> 在 JS 內部其實會抓取 Index 0 的物件下的屬性作為 Columns 插入資料庫<br>
+所以如果 Index 0 的物件不要設定 <code>is_sample</code>，那會因為是 NULL 而變成 0，接著 Index 1 放入 FLAG 並且把 <code>is_sample</code> 設為 1，可以通過 JavaScript 但在 SQLite 裡面一樣是空！<br>
+最後結帳就可以拿到 FLAG 了</p>
+<pre tabindex="0"><code class="language-json">    &#34;products&#34;: [
+        {&#34;book_id&#34;: CHEAP_BOOK_ID},
+        {&#34;book_id&#34;: FLAG_BOOK_ID, &#34;is_sample&#34;: 1},
+    ]</code></pre>
+<h3 id="ad-note">ad-note
+  <a class="heading-anchor" href="#ad-note" aria-label="Copy link to this section">
     <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
       <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
     </svg>
   </a>
 </h3>
-<ul>
-<li>Intigriti XSS Challenges: <a href="https://www.intigriti.com/researchers/hackademy/xss-challenges">https://www.intigriti.com/researchers/hackademy/xss-challenges</a></li>
-<li>Huli Writeup <a href="https://blog.huli.tw/">https://blog.huli.tw/</a></li>
-</ul>
+<p>這是一道 XSLeak 的題目，網站可以新增廣告並且是把內容 iframe 進去，目的是要偷到某一篇 POST 的內容 (nonce) 並且回到 /flag 取得 FLAG<br>
+另外還有提供一個搜尋功能，它會將 POST 和廣告內容混合查詢</p>
+<p>這一題的梗有兩個：</p>
+<ol>
+<li>
+<p>瀏覽器 <code>fetchLater</code> 行為
+這個函數允許在關閉頁面後持續抓取資料，而 nonce 頁面內容小於其他廣告。<br>
+同時，fetchLater 是有記憶體分配大小的，一個頁面最多 512 KB，配合此時有 8 個 iframge 所以每個 iframge 只有 64 KB，回到 nonce 頁面內容小於其他廣告，可以透過這個 API 做剩餘記憶體大小試探！</p>
+</li>
+<li>
+<p>它有一段 JS</p>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-js">setReferrerPolicy(iframe) {
+    const params = new URLSearchParams(window.location.search);
+    const policy = params.get(&#39;referrerPolicy&#39;);
+    const propName = Array.from(params.keys())[0];
+    const trustedValue = trustedPolicy.createHTML(policy);
+    
+    iframe.setAttribute(propName, trustedValue); 
+    return iframe;
+}</code></pre><p>這邊可以進行屬性汙染，當傳入的 url 像是 <code>?allow=foo&amp;referrerPolicy=deferred-fetch</code> 時，可以 將 allow 屬性設定為 deferred-fetch 並建立一個新的 iframe！這樣才可以使用像是 <code>fetchLater</code> 這類高消耗/實驗性質的 API</p>
+<p>作者解法： <a href="https://github.com/bliutech/my-ctf-challenges/blob/main/lactf-2026/ad-note/solve.html">https://github.com/bliutech/my-ctf-challenges/blob/main/lactf-2026/ad-note/solve.html</a></p>
+
+<h3 id="extend-note">extend-note
+  <a class="heading-anchor" href="#extend-note" aria-label="Copy link to this section">
+    <svg viewBox="0 0 1024 1024" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M633.417143 429.007238a174.567619 174.567619 0 0 1 0 246.857143l-155.306667 155.306667a186.709333 186.709333 0 1 1-264.045714-264.045715l76.483048-76.507428 51.73638 51.736381-76.507428 76.507428a113.566476 113.566476 0 1 0 160.597333 160.597334l155.306667-155.306667a101.424762 101.424762 0 0 0 0-143.408762z m208.603428-225.816381a186.709333 186.709333 0 0 1 0 264.045714L765.561905 543.744l-51.736381-51.712 76.507428-76.507429a113.566476 113.566476 0 1 0-160.597333-160.597333l-155.306667 155.306667a101.424762 101.424762 0 0 0 0 143.408762l-51.736381 51.736381a174.567619 174.567619 0 0 1 0-246.857143l155.306667-155.306667a186.709333 186.709333 0 0 1 264.045714 0z"/>
+    </svg>
+  </a>
+</h3>
+<p>又是 XSLeak，我發現前端安全真的好難 ＞﹏＜</p>
+<ol>
+<li>有網址 Redirect 行為，不過被 python urllib 解析 host 要跟題目靶機 host 一樣</li>
+<li>要想辦法跨站偵測 404 行為</li>
+</ol>
+<p><strong>梗</strong>：</p>
+<ol>
+<li>python urllib 對於 <code>0w0-b.com\@ctf.com</code> 的 host 解析會是 <code>ctf.com</code>，不過對於瀏覽器而言是在 <code>0w0-b.com</code> 開啟路徑 <code>/@ctf.com</code></li>
+<li>瀏覽器有 BfCache 機制可以進行 <code>history.back</code>，但是 404 會中斷 Cache 鍊，可以多重新導向幾次來穩定 Cache</li>
+</ol>
+<p>作者解法： <a href="https://github.com/bliutech/my-ctf-challenges/blob/main/lactf-2026/append-note/solve/index.mjs">https://github.com/bliutech/my-ctf-challenges/blob/main/lactf-2026/append-note/solve/index.mjs</a></p>
 
     </div>
 
@@ -652,7 +813,7 @@ BurpSuite 插件很適合拿來快速找！</li>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
       </svg>
-      Last updated on 2026-02-05
+      Last updated on 2026-02-11
     </div>
     
 
@@ -666,16 +827,26 @@ BurpSuite 插件很適合拿來快速找！</li>
       
       <nav class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         
+        <a href="/posts/xss_cheat/" class="group block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50/30 transition-colors">
+          <div class="text-xs text-gray-500 mb-1 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Previous
+          </div>
+          <div class="text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-2">XSS 軍火庫</div>
+        </a>
+        
 
         
-        <a href="/posts/la-ctf-2026/" class="group block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50/30 transition-colors sm:text-right sm:col-start-2">
+        <a href="/posts/lone-2602/" class="group block p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50/30 transition-colors sm:text-right sm:col-start-2">
           <div class="text-xs text-gray-500 mb-1 flex items-center sm:justify-end">
             <span class="sm:order-1 mr-0 sm:ml-1">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1.5 text-gray-400 sm:order-2 sm:ml-1 sm:mr-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </div>
-          <div class="text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-2">LA CTF 2026 Note</div>
+          <div class="text-sm font-medium text-gray-900 group-hover:text-blue-700 line-clamp-2">隨筆－聚</div>
         </a>
         
       </nav>
